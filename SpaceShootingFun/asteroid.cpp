@@ -23,7 +23,9 @@ void Asteroid::setY(){
   y++;
 }
 
-
+void Asteroid::modY(int i){
+  y = i;
+}
 int Asteroid::getY(){
 return y;
 }
@@ -41,4 +43,5 @@ void Asteroid::printAsteroid(){
     mvprintw(y + 2, x + 1, "o");
     refresh();
     usleep(DELAY); // Shorter delay between movements
+    setY();
 }
