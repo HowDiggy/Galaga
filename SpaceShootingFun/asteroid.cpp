@@ -13,7 +13,7 @@ Asteroid::Asteroid(){
 }
 
 void Asteroid::setX(){
-  srand(time(NULL));
+
   int x1 = 1 + (rand() % 50); // will change this value to an variable
   x = x1;
 }
@@ -23,12 +23,14 @@ void Asteroid::setY(){
   y++;
 }
 
-
+void Asteroid::modY(int i){
+  y = i;
+}
 int Asteroid::getY(){
-return y;
+  return y;
 }
 int Asteroid::getX(){
-return x;
+  return x;
 }
 
 void Asteroid::printAsteroid(){
@@ -40,5 +42,12 @@ void Asteroid::printAsteroid(){
     refresh();
     mvprintw(y + 2, x + 1, "o");
     refresh();
-    usleep(DELAY); // Shorter delay between movements
+    //usleep(DELAY); // Shorter delay between movements
+    setY();
 }
+
+// void Asteroid::moveAsteroid(){
+//
+//
+//
+// }
