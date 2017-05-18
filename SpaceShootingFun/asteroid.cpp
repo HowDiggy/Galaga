@@ -43,7 +43,7 @@ void Asteroid::printAsteroid(){
   std::default_random_engine generator;
 
 
-  for(int i=0; i < waveCount; i++){
+//  for(int i=0; i < waveCount; i++){
 
 
      getmaxyx(stdscr, max_y, max_x);
@@ -53,27 +53,28 @@ void Asteroid::printAsteroid(){
    // next_x = x + direction_x;
    // x+= direction_x;
 
-     while(next_y != max_y) {
-         clear();
+    if (next_y != max_y) {
+//       clear();
          mvprintw(y, x, " /\\ ");
          mvprintw(y+1, x, " \\/ ");
          //mvprintw(y+2, x, " o ");
-         refresh();
+         //refresh();
 
-         usleep(DELAY);
+//         usleep(DELAY);
 
          next_y = y + direction_y;
          y+= direction_y;
 
-
-         }
-
-     y = 1;
-     next_y = 0;
+    }
+    else
+    {
+      y = 1;
+      next_y = 0;
+    }
 
    // x = 1;
    // next_x = 0;
-  }
+//  }
 
 
 

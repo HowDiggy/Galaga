@@ -24,6 +24,7 @@ Ship::Ship (WINDOW * win, int y, int x, char c1, char c2, char c3, char c4, char
     ch6 = c6;
     ch7 = c7;
     ch8 = c8;
+    display();
 }
 
 //movements
@@ -106,7 +107,7 @@ int Ship::getmv() //return int value of key pressed
         default:
             break;
     }
-    
+
     return choice;
 }
 
@@ -122,5 +123,5 @@ void Ship::display() //display position character is at
     mvwaddch(curwin, yLoc+2, xLoc+2, ch8);
     mvwaddch(curwin, yLoc+2, xLoc+1, ch7);
     curs_set(0);
-    
+
 }

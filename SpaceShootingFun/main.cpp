@@ -12,13 +12,14 @@
 #include "Ship.hpp"
 #include "asteroid.hpp"
 
+#define DELAY 200000 // DELAY directly correlates with any movement of objects in the window the bigger the DELAY the slower an object moves.
 
 using namespace std;
 
 int main(int argc, char ** argv)
 {
 
-  Asteroid a;
+    Asteroid a;
     /*NCurses START*/
     initscr(); //initialize screen-always include/sets up memory and clears screen
     cbreak(); //Control+C exits program
@@ -67,13 +68,15 @@ int main(int argc, char ** argv)
 
     wrefresh(win2);
 
+    nodelay (win, TRUE);
+
     //--------------------------------Asteroid-------------------------------
 
     //a.printAsteroid();
     //--------------------------------------------------------------------------
 
     //pointer to Player
-    Ship * p = new Ship(win, 41, 39, '^', '(', ')', '0', '[', ']', '[', ']');
+    Ship * p = new Ship(win, 25, 25, '^', '(', ')', '0', '[', ']', '[', ']');
 
     // //Asteroid * a = new Asteroid(win, y, x);
     // vector <Asteroid> *a = new vector <Asteroid>(win, y, x);
@@ -84,6 +87,8 @@ int main(int argc, char ** argv)
 
     while(p->getmv() != 'x')
     {
+        clear();
+        usleep(DELAY);
         p->display();
         a.printAsteroid();
 
