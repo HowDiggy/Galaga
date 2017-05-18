@@ -46,9 +46,6 @@ void Asteroid::printAsteroid(){
   for(int i=0; i < waveCount; i++){
 
 
-
-   while(1) {
-
      getmaxyx(stdscr, max_y, max_x);
 
      std::uniform_int_distribution<int> distribution(1,max_x);
@@ -73,7 +70,7 @@ void Asteroid::printAsteroid(){
 
      y = 1;
      next_y = 0;
-     }
+
    // x = 1;
    // next_x = 0;
   }

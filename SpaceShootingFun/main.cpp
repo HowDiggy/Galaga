@@ -69,7 +69,7 @@ int main(int argc, char ** argv)
 
     //--------------------------------Asteroid-------------------------------
 
-    a.printAsteroid();
+    //a.printAsteroid();
     //--------------------------------------------------------------------------
 
     //pointer to Player
@@ -85,6 +85,8 @@ int main(int argc, char ** argv)
     while(p->getmv() != 'x')
     {
         p->display();
+        a.printAsteroid();
+
         refresh();
 
     }
@@ -97,6 +99,8 @@ int main(int argc, char ** argv)
         mvwprintw(score_win, 0, 0, "Score: %d", score);
         wrefresh(score_win);
     }*/
+
+
 
     //make sure program waits before exiting
     getch();
