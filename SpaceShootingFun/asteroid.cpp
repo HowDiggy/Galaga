@@ -1,4 +1,4 @@
-#include "asteroid.hpp"
+#include "Asteroid.hpp"
 #include <unistd.h>
 
 #define DELAY 200000 // DELAY directly correlates with any movement of objects in the window the bigger the DELAY the slower an object moves.
