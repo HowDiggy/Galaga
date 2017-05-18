@@ -1,4 +1,4 @@
-//asteroid.h
+//Asteroid.h
 
 
 #include <ncurses.h>
