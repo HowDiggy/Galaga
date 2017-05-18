@@ -8,19 +8,17 @@
 #include <unistd.h>
 #include <ctime>
 #include <random>
-<<<<<<< Updated upstream
 #include <vector>
-=======
->>>>>>> Stashed changes
 #include "Ship.hpp"
-#include "Asteroid.hpp"
+#include "asteroid.hpp"
 
 
 using namespace std;
 
-<<<<<<< Updated upstream
 int main(int argc, char ** argv)
 {
+
+  Asteroid a;
     /*NCurses START*/
     initscr(); //initialize screen-always include/sets up memory and clears screen
     cbreak(); //Control+C exits program
@@ -71,17 +69,17 @@ int main(int argc, char ** argv)
 
     //--------------------------------Asteroid-------------------------------
 
-    printAsteroid();
+    a.printAsteroid();
     //--------------------------------------------------------------------------
 
     //pointer to Player
     Ship * p = new Ship(win, 41, 39, '^', '(', ')', '0', '[', ']', '[', ']');
 
-    //Asteroid * a = new Asteroid(win, y, x);
-    vector <Asteroid> *a = new vector <Asteroid>(win, y, x);
-
-     //vector <Asteroid> a[3]; //vector of Asteroids
-    //a->resize(3);
+    // //Asteroid * a = new Asteroid(win, y, x);
+    // vector <Asteroid> *a = new vector <Asteroid>(win, y, x);
+    //
+    //  //vector <Asteroid> a[3]; //vector of Asteroids
+    // //a->resize(3);
 
 
     while(p->getmv() != 'x')
@@ -90,9 +88,6 @@ int main(int argc, char ** argv)
         refresh();
 
     }
-
-
-<<<<<<< Updated upstream
 
     /*
     score = 0;
