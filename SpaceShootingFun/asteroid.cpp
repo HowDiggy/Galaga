@@ -77,8 +77,6 @@ void Asteroid::printAsteroid(){
 //  }
 
 
-
-
 }
 
 // void Asteroid::moveAsteroid(){
