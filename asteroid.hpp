@@ -32,11 +32,11 @@ private:
 
 
      Asteroid();
+     void go();
      void setY();
      void setX();
      int getY();
      int getX();
-
      void printAsteroid();
 };
 

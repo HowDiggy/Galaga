@@ -90,7 +90,8 @@ int main(int argc, char ** argv)
         //clear();
         usleep(DELAY);
         p->display();
-        a.printAsteroid();
+
+        a.go();
 
         refresh();
         clear();
