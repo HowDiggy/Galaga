@@ -1,7 +1,14 @@
-//*********************************************************************************************
-//  main.cpp
-//  ncursesPractice
-//*********************************************************************************************
+//***************************************************************************************************
+// main.cpp
+//
+// Summary: This program utilizes the ncurses library to create a text-based game. It incorporates two
+//          other classes, Ship and asteroid, to print a ship and asteroid objects onto a window. It
+//          takes user input in the form of arrow keys to move the ship in four directions.
+//
+// Authors: Joann, Paulo, Osiel, Alexis
+// Created: May 2017
+//
+//***************************************************************************************************
 
 #include <iostream>
 #include <ncurses.h>
