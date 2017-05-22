@@ -18,15 +18,14 @@ Asteroid::Asteroid(){
 }
 
 void Asteroid::setX(){
-
+std::uniform_int_distribution<int> distribution(1,max_x);
 }
 
 void Asteroid::setY(){
+  next_y = y + direction_y;
+  y+= direction_y;
 }
 
-void Asteroid::modY(int i){
-
-}
 int Asteroid::getY(){
   return y;
 }
@@ -36,22 +35,15 @@ int Asteroid::getX(){
 
 void Asteroid::printAsteroid(){
 
-
      getmaxyx(stdscr, max_y, max_x);
 
-     std::uniform_int_distribution<int> distribution(1,max_x);
-
+     getX();
 
     if (next_y != max_y) {
-//       clear();
          mvprintw(y, x, " /\\ ");
          mvprintw(y+1, x, " \\/ ");
          //refresh();
-
-//         usleep(DELAY);
-
-         next_y = y + direction_y;
-         y+= direction_y;
+         getY();
 
     }
       else

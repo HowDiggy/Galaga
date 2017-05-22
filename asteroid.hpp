@@ -36,7 +36,6 @@ private:
      void setX();
      int getY();
      int getX();
-     void modY(int i);
 
      void printAsteroid();
 };
