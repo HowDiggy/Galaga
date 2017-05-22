@@ -34,8 +34,8 @@ int main(int argc, char ** argv)
 
     //set size of window-position on terminal screen
     int height, width, start_y, start_x;
-    height = 45;
-    width = 80;
+    height = max_y;
+    width = max_x;
     start_y = 0;
     start_x = 0; //added value moves window right
 
@@ -93,7 +93,7 @@ int main(int argc, char ** argv)
         a.printAsteroid();
 
         refresh();
-        //clear();
+        clear();
 
     }
 
