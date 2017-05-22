@@ -6,29 +6,34 @@
 #define DELAY 200000 // DELAY directly correlates with any movement of objects in the window the bigger the DELAY the slower an object moves.
 
 Asteroid::Asteroid(){
+
+
   // getmaxyx(stdscr, max_y, max_x);
-  // getX();
+  //getX();
   // getY();
   // printAsteroid();
   // getY();
 
 }
 void Asteroid::go(){
-  etmaxyx(stdscr, max_y, max_x);
-  getX();
+  getmaxyx(stdscr, max_y, max_x);
+  //getX();
   getY();
   printAsteroid();
-  //getY();
 
 }
 
 void Asteroid::setX(){
-std::uniform_int_distribution<int> distribution(1,max_x);
-x = distribution(generator);  // generates number in the range 1..6
+
+
+x = getRandom();
+
+// std::uniform_int_distribution<int> distribution(1,max_x);
+// x = distribution(generator);  // generates number in the range 1..6
 }
 
 void Asteroid::setY(){
-  next_y = 0;
+  //next_y = 0;
   direction_y = 1;
 
   if (next_y != max_y) {
@@ -53,10 +58,13 @@ int Asteroid::getX(){
   return x;
 }
 
-void Asteroid::printAsteroid(){
-
-         mvprintw(y, x, " /\\ ");
-         mvprintw(y+1, x, " \\/ ");
-         //refresh();
-
-}
+// void Asteroid::printAsteroid(){
+//
+//          mvprintw(y, x, " /\\ ");
+//          mvprintw(y+1, x, " \\/ ");
+//          //refresh();
+//
+// }
+// void Asteroid::randomX(int x1){
+//   x = x1;
+// }

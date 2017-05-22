@@ -19,7 +19,15 @@ using namespace std;
 int main(int argc, char ** argv)
 {
 
-    Asteroid a;
+    //Asteroid  b, c;
+    std::vector<Asteroid> asteroids;
+    asteroids.resize(10);
+    for(int x= 0; x < 10; x++){
+      Asteroid a , b;
+      b.randomX(x * 10);
+      asteroids[x] = b;
+
+    }
     /*NCurses START*/
     initscr(); //initialize screen-always include/sets up memory and clears screen
     cbreak(); //Control+C exits program
@@ -85,13 +93,20 @@ int main(int argc, char ** argv)
     // std::uniform_int_distribution<int> distribution(1,80);
     // int x = distribution(generator);  // generates number in the range 1..6
 
+    srand(time(NULL));
+
     while(p->getmv() != 'x')
     {
         //clear();
         usleep(DELAY);
         p->display();
 
-        a.go();
+
+        for(int h = 0; h < 10; h++){
+          asteroids[h].go();
+
+        }
+
 
         refresh();
         clear();

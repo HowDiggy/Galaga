@@ -11,8 +11,7 @@
 
 using namespace std;
 
- class Asteroid
-{
+ class Asteroid{
 private:
    int y;
    int x;
@@ -23,12 +22,20 @@ private:
    int direction_y;
    int direction_x;
    int waveCount;
-   std::default_random_engine generator;
+   static std::default_random_engine generator;
 
     WINDOW * curwin; //window
 
+    static int getRandom(){
+
+
+      return (2 + (2 * rand ()) %100);
+      // std::uniform_int_distribution<int> distribution(1,100);
+      // return distribution(generator);  // generates number in the range 1..6
+    }
+
  public:
-     Asteroid(WINDOW * win, int y, int x); //constructor w/ window
+     //Asteroid(WINDOW * win, int y, int x); //constructor w/ window
 
 
      Asteroid();
@@ -37,7 +44,18 @@ private:
      void setX();
      int getY();
      int getX();
-     void printAsteroid();
+     void printAsteroid(){
+
+
+       mvprintw(y, this-> x, "@@");
+       mvprintw(y+1, this-> x, "@@");
+       //refresh();
+
+     }
+
+     void randomX(int x){
+       this-> x = x;
+     }
 };
 
 #endif /* Asteroid_hpp */
