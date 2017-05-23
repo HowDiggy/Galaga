@@ -104,6 +104,7 @@ int main(int argc, char ** argv)
 
         for(int h = 0; h < 10; h++){
           asteroids[h].go();
+          DELAY;
 
         }
 

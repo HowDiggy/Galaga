@@ -24,12 +24,7 @@ void Asteroid::go(){
 }
 
 void Asteroid::setX(){
-
-
-x = getRandom();
-
-// std::uniform_int_distribution<int> distribution(1,max_x);
-// x = distribution(generator);  // generates number in the range 1..6
+  x = getRandom();
 }
 
 void Asteroid::setY(){
